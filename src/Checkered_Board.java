@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /*
 Задание 1
@@ -17,11 +18,18 @@
 */
 
 public class Checkered_Board {
-    public static int constellations(int n) {
+    public static void constellations() {
+        int n = 0;
+        try (Scanner in = new Scanner(System.in)) {
+            n = in.nextInt();
+        } catch (Exception e) {
+            System.out.println("Вы указали не число.");
+            return;
+        }
         int result = 0;
         if (n % 3 == 0 && n >= 3) {
             result = (int) Math.pow(2, n / 3);
         }
-        return result;
+        System.out.println(result);
     }
 }
