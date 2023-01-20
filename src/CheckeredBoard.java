@@ -17,7 +17,7 @@ import java.util.Scanner;
 Если такое невозможно, считайте количество способов равным 0.
 */
 
-public class Checkered_Board {
+public class CheckeredBoard {
     public static void constellations() {
         int n = 0;
         try (Scanner in = new Scanner(System.in)) {

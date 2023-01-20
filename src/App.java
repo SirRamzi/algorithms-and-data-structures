@@ -1,6 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
         // Checkered_Board.constellations();
-        Highway.vehicle_speed();
+        // Highway.vehicle_speed();
+        DivisorsNumber.findX();
     }
 }
