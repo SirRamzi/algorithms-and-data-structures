@@ -31,32 +31,28 @@ public class BrickGame {
                             yCoords[brickCount] = k;
                             brickCount++;
                             placed = true;
-
-
-for (int a = 0; a < 4; a++) {
-        boolean isRowComplete = true;
-        boolean isColComplete = true;
-        for (int b = 0; b < 4; b++) {
-            if (field[a][b] != 1) {
-                isRowComplete = false;
-            }
-            if (field[b][a] != 1) {
-                isColComplete = false;
-            }
-        }
-        if (isRowComplete) {
-            for (int b = 0; b < 4; b++) {
-                field[a][b] = 0;
-            }
-        }
-        if (isColComplete) {
-            for (int b = 0; b < 4; b++) {
-                field[b][a] = 0;
-            }
-        }
-    }
-
-
+                            for (int a = 0; a < 4; a++) {
+                                boolean isRowComplete = true;
+                                boolean isColComplete = true;
+                                for (int b = 0; b < 4; b++) {
+                                    if (field[a][b] != 1) {
+                                        isRowComplete = false;
+                                    }
+                                    if (field[b][a] != 1) {
+                                        isColComplete = false;
+                                    }
+                                }
+                                if (isRowComplete) {
+                                    for (int b = 0; b < 4; b++) {
+                                        field[a][b] = 0;
+                                    }
+                                }
+                                if (isColComplete) {
+                                    for (int b = 0; b < 4; b++) {
+                                        field[b][a] = 0;
+                                    }
+                                }
+                            }
                             break;
                         }
                     }
@@ -71,7 +67,7 @@ for (int a = 0; a < 4; a++) {
             }
         }
         for (int i = 0; i < brickCount; i++) {
-            System.out.println((xCoords[i]+1) + " " + (yCoords[i]+1));
+            System.out.println((xCoords[i] + 1) + " " + (yCoords[i] + 1));
         }
     }
 }
